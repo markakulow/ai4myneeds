@@ -3,57 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI4MyNeeds helps people discover practical ways AI can help with real needs, problems, tasks, and opportunities.">
-  <title>AI4MyNeeds | Find What AI Can Do for You</title>
+  <meta name="description" content="AI4MyNeeds helps you discover practical ways AI can help with work, life, health, money, learning and everyday problems.">
+  <title>AI4MyNeeds | What do you need help with?</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("ai4myneeds-theme");
+      const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = saved || preferred;
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#">AI4MyNeeds</a>
-    <nav aria-label="Main navigation">
-      <a href="#discover">Discover</a>
+    <a class="brand" href="#top" aria-label="AI4MyNeeds home">
+      <span class="brand-mark" aria-hidden="true">💡</span>
+      <span>AI4My<span>Needs</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#top">Home</a>
       <a href="#try-that">Try That With AI</a>
+      <a href="#tools">Tools & Apps</a>
+      <a href="#learn">Learn</a>
+      <a href="#resources">Resources</a>
       <a href="#about">About</a>
     </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+    </button>
   </header>
 
-  <main>
-    <section class="hero" id="discover">
-      <p class="eyebrow">Start with the need. Not the technology.</p>
-      <h1>What could AI help you with?</h1>
-      <p class="hero-copy">
-        You don't need to know which AI tool to use or how to write the perfect prompt.
-        Start with what you're trying to do, fix, learn, create, or improve.
-      </p>
-      <div class="hero-actions">
-        <a class="button primary" href="#try-that">Help me find something</a>
-        <a class="button secondary" href="#about">What is AI4MyNeeds?</a>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Real needs. Practical AI.</p>
+        <h1>What do you <span class="underline">need help with?</span></h1>
+        <p class="hero-copy">Pick a topic and see real ways AI can help, or let us guide you if you're not sure where to start.</p>
+
+        <div class="need-grid" aria-label="Choose what you need help with">
+          <a class="need-card work" href="#work">
+            <span class="need-icon" aria-hidden="true">💼</span>
+            <span><strong>Work & Career</strong><small>Work smarter, find a job, lead better and get more done.</small></span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="need-card health" href="#health">
+            <span class="need-icon" aria-hidden="true">❤️</span>
+            <span><strong>Health & Everyday Life</strong><small>Eat better, cook, exercise and build healthy habits.</small></span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="need-card money" href="#money">
+            <span class="need-icon" aria-hidden="true">🪙</span>
+            <span><strong>Money</strong><small>Budget, understand expenses and plan for the future.</small></span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="need-card create" href="#learn">
+            <span class="need-icon" aria-hidden="true">🎨</span>
+            <span><strong>Learn & Create</strong><small>Build new skills, understand AI and bring your ideas to life.</small></span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="need-card solve" href="#try-that">
+            <span class="need-icon" aria-hidden="true">🔧</span>
+            <span><strong>Solve a Problem</strong><small>Troubleshoot, analyze, compare options and get clear answers.</small></span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <aside class="no-idea">
+          <div class="no-idea-icon" aria-hidden="true">🧭</div>
+          <div>
+            <h2>Honestly, I have no idea.</h2>
+            <p>That's okay. Tell us a little about what you do, what takes up your time, or what's frustrating you. We'll help you discover where AI might actually be useful.</p>
+          </div>
+          <a class="button primary" href="#discover">Help me figure it out <span aria-hidden="true">→</span></a>
+        </aside>
       </div>
     </section>
 
-    <section class="section" id="try-that">
-      <p class="eyebrow">Try That With AI</p>
-      <h2>AI is more useful when you start with real life.</h2>
-      <p>
-        This will become our discovery experience: practical ideas for work, home,
-        learning, creativity, decisions, and the tasks you didn't realize AI could help with.
-      </p>
-      <button class="idea-button" id="ideaButton" type="button">Show me an example</button>
-      <p class="idea-output" id="ideaOutput" aria-live="polite"></p>
+    <section class="section pathways" id="discover">
+      <p class="eyebrow centered">How AI4MyNeeds helps</p>
+      <h2 class="section-title">Different paths. Same destination.</h2>
+      <p class="section-intro">Whether you want ideas, practical tools, or to build your skills, there's a simple place to start.</p>
+
+      <div class="path-grid">
+        <article class="path">
+          <span class="path-icon" aria-hidden="true">🔎</span>
+          <h3>Discover</h3>
+          <p>Find things you didn't know AI could help with.</p>
+          <a href="#try-that">Explore Try That With AI →</a>
+        </article>
+        <article class="path" id="tools">
+          <span class="path-icon" aria-hidden="true">⚙️</span>
+          <h3>Use</h3>
+          <p>Practical tools and apps built around real needs.</p>
+          <a href="#featured-tools">See Tools & Apps →</a>
+        </article>
+        <article class="path" id="learn">
+          <span class="path-icon" aria-hidden="true">💡</span>
+          <h3>Learn</h3>
+          <p>Understand AI without needing a computer science degree.</p>
+          <a href="#resources">Browse Resources →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section try-section" id="try-that">
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">Try That With AI</p>
+          <h2>You can do <span class="accent-text">that</span> with AI?</h2>
+          <p>Useful, surprising and practical examples for everyday life and work.</p>
+        </div>
+        <a class="text-link" href="#resources">See more ideas →</a>
+      </div>
+
+      <div class="idea-grid">
+        <article class="idea-card"><span>📄</span><h3>Understand a confusing bill</h3><p>Have AI explain the fine print and help you know what to ask.</p></article>
+        <article class="idea-card"><span>🍴</span><h3>Make dinner from what you have</h3><p>Use the ingredients already in your kitchen to generate meal ideas.</p></article>
+        <article class="idea-card"><span>💬</span><h3>Rehearse a difficult conversation</h3><p>Practice before having the real conversation.</p></article>
+        <article class="idea-card"><span>📷</span><h3>Turn a photo into useful information</h3><p>Get explanations, identify items and learn what to do next.</p></article>
+      </div>
+    </section>
+
+    <section class="section placeholder-section" id="featured-tools">
+      <p class="eyebrow">Tools & Apps</p>
+      <h2>Built around actual needs.</h2>
+      <p>AI4MyNeeds tools are coming next. We'll build these deliberately, one useful experience at a time.</p>
+    </section>
+
+    <section class="section placeholder-section" id="resources">
+      <p class="eyebrow">Resources</p>
+      <h2>Useful information without the jargon marathon.</h2>
+      <p>Guides, how-tos, examples and practical explanations will live here alongside the tools.</p>
     </section>
 
     <section class="section about" id="about">
       <p class="eyebrow">About AI4MyNeeds</p>
-      <h2>Problems first. AI second.</h2>
-      <p>
-        AI4MyNeeds is being built to make AI practical and approachable without requiring
-        people to become AI experts first. This is version 0.1, and we're building from here.
-      </p>
+      <h2>Start with the need. Make it easy.</h2>
+      <p>AI4MyNeeds is being built to help people discover, understand and use AI for real problems without requiring them to become AI experts first.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> AI4MyNeeds. Built with curiosity.🚀 </p>
+    <a class="brand footer-brand" href="#top"><span aria-hidden="true">💡</span> AI4My<span>Needs</span></a>
+    <p>&copy; <span id="year"></span> AI4MyNeeds. Built with curiosity.</p>
   </footer>
 
   <script src="script.js"></script>
