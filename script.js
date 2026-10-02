@@ -1,19 +1,24 @@
-const ideas = [
-  "Turn a messy list of thoughts into a clear plan.",
-  "Compare a confusing bill or estimate and identify questions to ask.",
-  "Practice for a difficult conversation before you have it.",
-  "Turn a repetitive work task into a reusable process.",
-  "Explain something complicated in language that actually makes sense.",
-  "Brainstorm ways to save time on a task you do every week."
-];
-
-const ideaButton = document.querySelector("#ideaButton");
-const ideaOutput = document.querySelector("#ideaOutput");
+const themeToggle = document.querySelector("#themeToggle");
+const themeIcon = themeToggle.querySelector(".theme-icon");
 const year = document.querySelector("#year");
 
-year.textContent = new Date().getFullYear();
+function currentTheme() {
+  return document.documentElement.dataset.theme || "light";
+}
 
-ideaButton.addEventListener("click", () => {
-  const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
-  ideaOutput.textContent = randomIdea;
+function updateThemeButton() {
+  const dark = currentTheme() === "dark";
+  themeIcon.textContent = dark ? "☀️" : "🌙";
+  themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+  themeToggle.setAttribute("title", dark ? "Switch to light mode" : "Switch to dark mode");
+}
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = currentTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = nextTheme;
+  localStorage.setItem("ai4myneeds-theme", nextTheme);
+  updateThemeButton();
 });
+
+year.textContent = new Date().getFullYear();
+updateThemeButton();
