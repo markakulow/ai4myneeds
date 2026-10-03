@@ -232,3 +232,8 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 
 /* HubSpot human resume help form */
 .human-help{align-items:flex-start}.human-help-form{width:min(100%,520px);padding:1.25rem;border:1px solid var(--border,#dde3ec);border-radius:16px;background:var(--surface,#fff)}.human-help-form h3{margin:0 0 .4rem}.human-help-form>p{margin:.1rem 0 1rem;line-height:1.5;opacity:.82}@media(max-width:800px){.human-help{display:block}.human-help-form{margin-top:1.25rem;width:100%}}
+
+/* Improve HubSpot form contrast in dark mode */
+[data-theme="dark"] .human-help-form{background:#f4f7fb;color:#15233a}
+[data-theme="dark"] .human-help-form h3,[data-theme="dark"] .human-help-form>p{color:#15233a;opacity:1}
+[data-theme="dark"] .human-help-form .hs-form-frame{color:#15233a}
