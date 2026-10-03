@@ -173,3 +173,23 @@ footer { padding:2rem 1.5rem 3rem; display:flex; align-items:center; justify-con
 .resource-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.resource-grid article{padding:1.25rem;border:1px solid var(--border);border-radius:16px;background:var(--surface)}.resource-grid article>span{font-size:1.5rem}.resource-grid h3{margin:.6rem 0 .3rem;font-size:1rem}.resource-grid p{margin:0 0 .8rem;color:var(--muted);font-size:.86rem}
 @media(max-width:900px){.work-grid{grid-template-columns:1fr}.resource-grid{grid-template-columns:1fr 1fr}.business-callout{grid-template-columns:60px 1fr}.business-callout>a{grid-column:1/-1;text-align:center}}
 @media(max-width:600px){.work-wrap{padding-left:1rem;padding-right:1rem}.work-hero{padding:1.4rem 0 2rem}.work-title{align-items:flex-start;gap:1rem}.work-title-icon{width:58px;height:58px;border-radius:16px;font-size:1.9rem;flex:0 0 auto}.work-title h1{font-size:2.5rem}.work-title p{font-size:.95rem}.work-help{padding-top:2rem}.work-grid{gap:.75rem}.work-card{min-height:0;padding:1rem;grid-template-columns:48px minmax(0,1fr) 24px;gap:.75rem}.wc-icon{width:44px;height:44px;font-size:1.45rem}.work-card strong{font-size:1rem}.work-card small{font-size:.8rem}.business-callout{grid-template-columns:44px 1fr;padding:1rem}.business-icon{font-size:2rem}.business-callout h2{font-size:1.2rem}.resource-grid{grid-template-columns:1fr}.popular-head{align-items:flex-start;flex-direction:column}}
+
+/* Work & Career visual polish */
+.work-hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(310px,.65fr);align-items:center;gap:2rem}
+.work-hero-art{position:relative;min-height:190px;overflow:hidden;border:1px solid var(--border);border-radius:26px;background:linear-gradient(150deg,#eef6ff 0%,#fff8e8 100%);box-shadow:var(--shadow)}
+.work-hero-art:after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,#d8b68d,#b88b5d)}
+.desk-plant{position:absolute;z-index:2;left:10%;top:18%;font-size:4rem;filter:drop-shadow(0 8px 6px rgba(0,0,0,.12))}
+.desk-laptop{position:absolute;z-index:2;right:7%;top:22%;width:112px;height:72px;padding-top:12px;border:6px solid #31394a;border-radius:8px;background:#9fb4cc;color:#dce8f6;text-align:center;font-size:2.2rem;transform:rotate(2deg)}
+.coffee-cup{position:absolute;z-index:3;right:35%;bottom:22px;width:102px;height:108px;display:grid;place-items:center;padding:10px;border-radius:8px 8px 24px 24px;background:#fffdf8;color:#161616;box-shadow:0 10px 20px rgba(0,0,0,.16);transform:rotate(-2deg)}
+.coffee-cup:after{content:"";position:absolute;right:-26px;top:24px;width:35px;height:42px;border:9px solid #fffdf8;border-left:0;border-radius:0 50% 50% 0}
+.coffee-cup span{font-family:"Segoe Print","Bradley Hand",cursive;font-size:.82rem;font-weight:800;line-height:1.15;text-align:center}
+html[data-theme="dark"] .work-hero-art{background:linear-gradient(150deg,#1b2942,#312b21)}
+.work-card{border-width:1.5px}
+.wc-blue{background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 68%,#d6eaff),color-mix(in srgb,var(--surface) 82%,#eaf4ff));border-color:color-mix(in srgb,var(--blue) 18%,var(--border))}
+.wc-purple{background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 67%,#e7dcff),color-mix(in srgb,var(--surface) 82%,#f3edff));border-color:color-mix(in srgb,#805bd8 20%,var(--border))}
+.wc-green{background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 67%,#d4f5df),color-mix(in srgb,var(--surface) 82%,#eaf9ef));border-color:color-mix(in srgb,#38a765 20%,var(--border))}
+.wc-gold{background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 67%,#ffebbb),color-mix(in srgb,var(--surface) 82%,#fff6dd));border-color:color-mix(in srgb,#d49b00 20%,var(--border))}
+.wc-pink{background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 67%,#ffdbe7),color-mix(in srgb,var(--surface) 82%,#fff0f5));border-color:color-mix(in srgb,#d85c87 18%,var(--border))}
+html[data-theme="dark"] .work-card{background:var(--surface)}
+@media(max-width:900px){.work-hero-grid{grid-template-columns:1fr}.work-hero-art{min-height:150px}}
+@media(max-width:600px){.work-hero-grid{gap:1.2rem}.work-hero-art{min-height:105px;border-radius:18px}.desk-plant{font-size:2.7rem;top:12%}.desk-laptop{width:78px;height:50px;border-width:4px;font-size:1.4rem;top:18%}.coffee-cup{right:37%;bottom:12px;width:72px;height:76px;padding:5px;border-radius:6px 6px 18px 18px}.coffee-cup:after{right:-18px;top:18px;width:24px;height:28px;border-width:6px;border-left:0}.coffee-cup span{font-size:.58rem}}
