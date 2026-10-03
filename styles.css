@@ -220,3 +220,12 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 
 /* Guided resume workflows */
 .workflow-prep{margin:1.25rem 0;padding:1rem 1.15rem;border-radius:14px;background:var(--surface-soft,#f5f8ff);line-height:1.55}.guided-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1rem 0 1.6rem}.guided-step{display:flex;gap:.75rem;align-items:flex-start;padding:1rem;border:1px solid var(--border,#dde3ec);border-radius:14px;background:var(--surface,#fff)}.guided-step b{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:50%;background:#0b5bd3;color:#fff}.guided-step p{margin:.15rem 0 0;line-height:1.45}.guide-placeholder{grid-column:1/-1;opacity:.72}.prompt-divider{display:flex;align-items:center;gap:1rem;margin:1.4rem 0 .9rem;font-weight:700}.prompt-divider:before,.prompt-divider:after{content:"";height:1px;background:var(--border,#dde3ec);flex:1}.prompt-divider span{text-align:center}@media(max-width:800px){.guided-steps{grid-template-columns:1fr}.prompt-divider:before,.prompt-divider:after{display:none}.prompt-divider{justify-content:center}}
+
+
+/* Guided resume workflow layout refinement */
+.guided-steps{display:flex;flex-direction:column;gap:.7rem;margin:1rem 0 1.6rem;max-width:920px}
+.guided-step{display:grid;grid-template-columns:34px 1fr;gap:.85rem;align-items:start;padding:.85rem 1rem;border:1px solid var(--border,#dde3ec);border-radius:12px;background:var(--surface,#fff)}
+.guided-step b{display:grid;place-items:center;width:30px;height:30px;margin:0;border-radius:50%;background:#0b5bd3;color:#fff;font-size:.9rem;line-height:1}
+.guided-step p{margin:.22rem 0 0;line-height:1.5}
+.workflow-prep{max-width:920px}
+@media(max-width:800px){.guided-step{grid-template-columns:30px 1fr;padding:.8rem}.guided-step b{width:28px;height:28px}.guided-step p{margin:.12rem 0 0}}
