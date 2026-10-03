@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Practical AI-powered resume and application help built around your real experience.">
+<title>Resume & Applications | AI4MyNeeds</title><link rel="stylesheet" href="styles.css">
+<script>(()=>{const s=localStorage.getItem("ai4myneeds-theme");const p=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=s||p;})();</script>
+</head><body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">💡</span><span>AI4My<span>Needs</span></span></a>
+<nav class="main-nav"><a href="index.html">Home</a><a href="index.html#try-that">Try That With AI</a><a href="index.html#featured-tools">Tools & Apps</a><a href="index.html#learn">Learn</a><a href="index.html#resources">Resources</a><a href="index.html#about">About</a></nav>
+<button class="theme-toggle" id="themeToggle" type="button"><span class="theme-icon">🌙</span></button></header>
+<main class="resume-page">
+<section class="resume-hero"><div class="resume-wrap">
+<p class="breadcrumb"><a href="index.html">Home</a> / <a href="work-career.html">Work & Career</a> / Resume & Applications</p>
+<div class="resume-title"><span class="resume-title-icon">📄</span><div><p class="eyebrow">Resume & Applications</p><h1>Put your real experience to work.</h1><p>Use AI to make your experience clearer, stronger and more relevant without inventing skills, accomplishments or experience you don't have.</p></div></div>
+<div class="truth-note"><span>✓</span><p><strong>Your experience stays yours.</strong> AI4MyNeeds is designed to help you communicate your real background more effectively, not create a fictional one.</p></div>
+</div></section>
+<section class="resume-wrap resume-start">
+<p class="eyebrow centered">Start here</p><h2>What do you need help with?</h2><p class="resume-intro">Choose a path. We'll guide you through what to gather, how AI can help, and what to review before you use the result.</p>
+<div class="resume-action-grid">
+<a class="resume-action ra-blue" href="#review"><span>🔍</span><div><strong>Review My Resume</strong><small>Get a structured review of clarity, impact, formatting and opportunities to improve.</small></div><b>→</b></a>
+<a class="resume-action ra-purple" href="#tailor"><span>🎯</span><div><strong>Tailor My Resume to a Job</strong><small>Compare your resume with a job description and identify what your real experience supports.</small></div><b>→</b></a>
+<a class="resume-action ra-green" href="#build"><span>✍️</span><div><strong>Help Me Write a Resume</strong><small>Start from scratch or rebuild an older resume with a guided process.</small></div><b>→</b></a>
+<a class="resume-action ra-gold" href="#cover"><span>💌</span><div><strong>Create a Cover Letter</strong><small>Build a personalized letter around your background and the actual opportunity.</small></div><b>→</b></a>
+<a class="resume-action ra-pink" href="#application"><span>📝</span><div><strong>Answer an Application Question</strong><small>Work through experience, accomplishment and motivation questions without sounding generic.</small></div><b>→</b></a>
+<a class="resume-action ra-blue" href="#ats"><span>🤖</span><div><strong>Make My Resume More ATS-Friendly</strong><small>Understand formatting and keyword alignment without stuffing your resume with buzzwords.</small></div><b>→</b></a>
+</div></section>
+<section class="resume-wrap guided" id="review"><div class="guided-copy"><p class="eyebrow">Interactive guide</p><h2>Review My Resume</h2><p>For our first guided workflow, gather your current resume and use the steps below. You stay in control of every change.</p>
+<div class="steps"><div><span>1</span><p><strong>Start with your real resume.</strong><br>Use the version you actually send to employers. Don't “improve” facts before the review.</p></div><div><span>2</span><p><strong>Decide what you want reviewed.</strong><br>Clarity, accomplishments, leadership impact, formatting, length, or overall effectiveness.</p></div><div><span>3</span><p><strong>Use AI as a reviewer, not a ghostwriter.</strong><br>Ask it to identify opportunities and questions before rewriting anything.</p></div><div><span>4</span><p><strong>Verify every recommendation.</strong><br>Keep only changes that accurately reflect what you did and can comfortably discuss in an interview.</p></div></div></div>
+<aside class="prompt-box"><span class="prompt-label">STARTER PROMPT</span><h3>Try this with your resume</h3><p id="resumePrompt">Act as a candid resume reviewer. Review the resume I provide for clarity, impact, relevance and readability. Do not invent or assume any experience, skills, metrics or accomplishments. First identify the strongest areas, then the areas that need improvement. Ask me questions when additional facts would help strengthen a bullet rather than creating those facts yourself. Explain your recommendations before rewriting anything.</p><button id="copyPrompt" type="button">Copy prompt</button><small id="copyStatus" aria-live="polite"></small></aside>
+</section>
+<section class="resume-wrap human-help"><div><span class="human-badge">HUMAN HELP</span><h2>Want a real person to review it?</h2><p>AI can be a useful first pass. Sometimes you want candid feedback from someone who works with resumes and careers for a living. We're building a way to connect visitors with trusted resume professionals and career resources.</p><p class="coming-note">Professional review options are coming soon. We won't recommend a service simply because it pays us.</p></div><a class="button primary" href="mailto:hello@ai4myneeds.com?subject=Resume%20Help%20Request">I'm interested in human resume help →</a></section>
+<section class="resume-wrap resume-more"><p class="eyebrow">Coming next</p><h2>The rest of your application toolkit.</h2><div class="mini-grid"><article id="tailor"><span>🎯</span><h3>Tailor to a Job</h3><p>Resume + job description guidance.</p></article><article id="build"><span>✍️</span><h3>Build a Resume</h3><p>A guided start-from-scratch workflow.</p></article><article id="cover"><span>💌</span><h3>Cover Letters</h3><p>Personalized, grounded letters.</p></article><article id="application"><span>📝</span><h3>Application Answers</h3><p>Clear responses based on your experience.</p></article><article id="ats"><span>🤖</span><h3>ATS Guidance</h3><p>Formatting and keyword alignment.</p></article></div></section>
+</main>
+<footer><a class="brand footer-brand" href="index.html"><span>💡</span> AI4My<span>Needs</span></a><p>&copy; <span id="year"></span> AI4MyNeeds. Built with curiosity.</p></footer>
+<script src="script.js"></script><script>const b=document.querySelector("#copyPrompt");if(b)b.addEventListener("click",async()=>{await navigator.clipboard.writeText(document.querySelector("#resumePrompt").innerText);document.querySelector("#copyStatus").textContent="Copied!";b.textContent="Copied ✓";});</script>
+</body></html>
