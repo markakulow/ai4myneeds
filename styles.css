@@ -237,3 +237,8 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 [data-theme="dark"] .human-help-form{background:#f4f7fb;color:#15233a}
 [data-theme="dark"] .human-help-form h3,[data-theme="dark"] .human-help-form>p{color:#15233a;opacity:1}
 [data-theme="dark"] .human-help-form .hs-form-frame{color:#15233a}
+
+/* Keep lightweight self-service cards compact when a neighboring card expands. */
+.diy-grid { align-items: start; }
+.diy-card { align-self: start; }
+.mini-guide[hidden] { display: none !important; }
