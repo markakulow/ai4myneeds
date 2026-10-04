@@ -260,3 +260,15 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 .resource-section>div>p,.resource-section>p{line-height:1.8}
 .resource-section .diy-grid{width:min(1100px,calc(100vw - 2.5rem));position:relative;left:50%;transform:translateX(-50%)}
 @media(max-width:700px){.resource-hero{padding-top:2.8rem}.resource-hero h1{font-size:2.45rem}.resource-reading{width:min(100% - 2rem,760px)}.resource-toc{padding:1.25rem}.resource-section{padding-top:2.5rem}}
+
+/* Resource alignment cleanup */
+.resource-page .resource-reading{box-sizing:border-box}
+.resource-page .resource-section{width:min(760px,calc(100% - 2.5rem));margin-left:auto;margin-right:auto}
+.resource-page .resource-section .resume-how-copy{width:100%;max-width:none;margin:0}
+.resource-page .resource-section .eyebrow,
+.resource-page .resource-section h2,
+.resource-page .resource-section p{text-align:left}
+.resource-page .resource-section .centered{text-align:left}
+.resource-page .resource-section .resume-intro{margin-left:0;margin-right:0;max-width:100%}
+.resource-page .resource-section .diy-grid{margin-top:1.5rem}
+@media(max-width:700px){.resource-page .resource-section{width:min(100% - 2rem,760px)}}
