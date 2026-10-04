@@ -272,3 +272,14 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 .resource-page .resource-section .resume-intro{margin-left:0;margin-right:0;max-width:100%}
 .resource-page .resource-section .diy-grid{margin-top:1.5rem}
 @media(max-width:700px){.resource-page .resource-section{width:min(100% - 2rem,760px)}}
+
+/* Resource layout refinement: retain editorial identity while matching site flow */
+.resource-page .resource-section .resume-how-copy{max-width:720px;margin-left:auto;margin-right:auto;text-align:center}
+.resource-page .resource-section .resume-how-copy .eyebrow,
+.resource-page .resource-section .resume-how-copy h2,
+.resource-page .resource-section .resume-how-copy p{text-align:center}
+.resource-page .resource-section>.eyebrow.centered,
+.resource-page .resource-section>h2,
+.resource-page .resource-section>.resume-intro{text-align:center}
+.resource-page .resource-section>.resume-intro{max-width:700px;margin-left:auto;margin-right:auto}
+.resource-page .resource-section .diy-grid{text-align:left}
