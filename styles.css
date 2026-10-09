@@ -336,3 +336,9 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 @media(max-width:540px){.nav-help{padding:9px 11px;font-size:.8rem}.nav-actions{gap:6px}.brand{font-size:1.1rem}.need-grid:has(.need-card:nth-child(6)) .need-card{grid-column:1/-1}}
 /* Place creator image after heading and intro on mobile, once the real photo is uploaded */
 @media(max-width:760px){.about-v3 .about-creator{display:flex;flex-direction:column}.about-v3 .about-creator>div:last-child{display:contents}.about-v3 .about-creator h2{order:0}.about-v3 .about-creator .creator-visual{order:1}.about-v3 .about-creator p{order:2}}
+
+/* Discover: hover for pointer devices, click/tap remains supported */
+@media(hover:hover) and (pointer:fine){
+ .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:grid;gap:3px}
+ .nav-dropdown:hover .nav-dropdown-toggle,.nav-dropdown:focus-within .nav-dropdown-toggle{color:var(--text);border-bottom-color:var(--blue)}
+}
