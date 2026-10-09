@@ -306,3 +306,33 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 .learn-feature{padding-top:3.5rem;padding-bottom:3.5rem}.learn-feature-card{padding:1.7rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem;border:1px solid color-mix(in srgb,var(--blue) 25%,var(--border));border-radius:22px;background:var(--surface);box-shadow:var(--shadow)}.learn-icon{font-size:2.5rem}.learn-feature-card h2{margin:.25rem 0 .5rem;font-size:2rem}.learn-feature-card p:not(.eyebrow){max-width:760px;color:var(--muted)}.learn-tags{display:flex;flex-wrap:wrap;gap:.45rem}.learn-tags span{font-size:.75rem}.learn-coming{padding-top:2rem;padding-bottom:4rem;text-align:center}.learn-coming>h2{margin:.2rem 0;font-size:clamp(2rem,4vw,3rem)}.learn-coming>p{max-width:760px;margin:.6rem auto 1.7rem;color:var(--muted)}.coming-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:left}.coming-grid article{padding:1.25rem;border:1px solid var(--border);border-radius:16px;background:var(--surface)}.coming-grid article>span{font-size:1.8rem}.coming-grid h3{margin:.5rem 0 .3rem}.coming-grid p{color:var(--muted);font-size:.9rem}.coming-grid b{color:var(--blue);font-size:.7rem;letter-spacing:.08em}.learn-discover{margin-bottom:4rem;padding-top:1.5rem;padding-bottom:1.5rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;border:1px solid var(--border);border-radius:20px;background:var(--surface)}.learn-discover>span{font-size:2.4rem}.learn-discover h2{margin:.1rem 0}.learn-discover p:not(.eyebrow){margin:.2rem 0;color:var(--muted)}
 @media(max-width:900px){.ai101-hero-grid{grid-template-columns:1fr}.ai101-layout{grid-template-columns:1fr}.ai101-progress{position:static}.ai101-progress nav{grid-template-columns:repeat(4,1fr)}.ai101-destinations,.coming-grid{grid-template-columns:1fr}.learn-feature-card{grid-template-columns:1fr}.learn-feature-card .button{justify-self:start}.learn-discover{grid-template-columns:auto 1fr}.learn-discover .button{grid-column:1/-1;justify-content:center}}
 @media(max-width:600px){.ai101-wrap{padding-left:1rem;padding-right:1rem}.ai101-hero,.learn-hero{padding:2rem 0 2.4rem}.ai101-hero h1,.learn-hero h1{font-size:2.7rem}.ai101-deck{font-size:1rem}.ai101-hero-actions{align-items:flex-start;flex-direction:column}.ai101-layout{padding-top:1.2rem;gap:2rem}.ai101-progress{padding:.8rem}.ai101-progress nav{grid-template-columns:repeat(4,1fr);gap:.35rem}.ai101-progress a{display:flex;justify-content:center;padding:.3rem}.ai101-progress a span{display:none}.ai101-lesson{padding-bottom:3rem;margin-bottom:2.5rem}.lesson-number{font-size:3.3rem}.ai101-lesson h2{font-size:2rem;padding-right:2.5rem}.lesson-callout{grid-template-columns:32px 1fr;padding:1rem}.mini-pill-grid{display:grid;grid-template-columns:1fr}.privacy-grid,.before-after{grid-template-columns:1fr}.home-ai101-banner{margin:1rem 1rem 0;padding:1rem;align-items:stretch;flex-direction:column}.home-ai101-banner>div{align-items:flex-start}.home-ai101-banner .button{justify-content:center}.learn-feature{padding-top:2rem;padding-bottom:2rem}.learn-feature-card{padding:1.2rem}.learn-coming{padding-top:1rem}.learn-discover{margin-left:1rem;margin-right:1rem;padding:1rem;grid-template-columns:38px 1fr}}
+
+/* Navigation V2 */
+.site-header{max-width:none;width:100%;padding:12px max(20px,calc((100vw - 1180px)/2));grid-template-columns:auto 1fr auto;gap:22px}
+.site-header .main-nav{display:flex;align-items:center;gap:clamp(12px,1.5vw,22px)}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:6px;padding:.5rem 0;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font:700 .9rem inherit;cursor:pointer}
+.nav-dropdown-toggle:hover,.nav-dropdown-toggle[aria-expanded=true]{color:var(--text);border-bottom-color:var(--blue)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 8px);left:-14px;min-width:245px;padding:10px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:14px;display:none;z-index:40}
+.nav-dropdown.is-open .nav-dropdown-menu{display:grid;gap:3px}
+.main-nav .nav-dropdown-menu a{padding:10px 12px;border:0;border-radius:9px;font-weight:600}
+.main-nav .nav-dropdown-menu a:hover,.main-nav .nav-dropdown-menu a:focus-visible{background:var(--surface-soft)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.nav-help{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border-radius:11px;background:var(--blue);color:#fff;text-decoration:none;font-weight:750;font-size:.88rem;white-space:nowrap}
+.nav-help:hover{filter:brightness(1.1)}
+.nav-menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:11px;font-size:1.4rem;cursor:pointer}
+.need-card.creator{background:color-mix(in srgb,var(--surface) 84%,#fbe5d2)}
+.need-grid:has(.need-card:nth-child(6)) .need-card{grid-column:span 2}
+.need-grid:has(.need-card:nth-child(6)) .need-card:nth-child(4),.need-grid:has(.need-card:nth-child(6)) .need-card:nth-child(5){grid-column:span 2}
+@media(max-width:960px){
+.site-header{grid-template-columns:auto 1fr auto;gap:12px;padding:10px 16px}
+.nav-menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+.site-header .main-nav{display:none;position:absolute;top:100%;left:12px;right:12px;max-height:calc(100vh - 85px);overflow-y:auto;flex-direction:column;align-items:stretch;gap:0;padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);z-index:50}
+.site-header .main-nav.nav-open{display:flex}
+.site-header .main-nav>a,.site-header .nav-dropdown-toggle{width:100%;text-align:left;padding:12px;border-bottom:0}
+.site-header .nav-dropdown-menu{position:static;box-shadow:none;border:0;background:var(--surface-soft);margin:0 6px 8px;padding:5px;min-width:0}
+.nav-actions{grid-column:3}
+}
+@media(max-width:540px){.nav-help{padding:9px 11px;font-size:.8rem}.nav-actions{gap:6px}.brand{font-size:1.1rem}.need-grid:has(.need-card:nth-child(6)) .need-card{grid-column:1/-1}}
+/* Place creator image after heading and intro on mobile, once the real photo is uploaded */
+@media(max-width:760px){.about-v3 .about-creator{display:flex;flex-direction:column}.about-v3 .about-creator>div:last-child{display:contents}.about-v3 .about-creator h2{order:0}.about-v3 .about-creator .creator-visual{order:1}.about-v3 .about-creator p{order:2}}
