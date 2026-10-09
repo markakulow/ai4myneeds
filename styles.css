@@ -342,3 +342,9 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
  .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:grid;gap:3px}
  .nav-dropdown:hover .nav-dropdown-toggle,.nav-dropdown:focus-within .nav-dropdown-toggle{color:var(--text);border-bottom-color:var(--blue)}
 }
+
+/* Bridge the pointer gap between Discover trigger and flyout */
+@media(hover:hover) and (pointer:fine){
+.nav-dropdown::after{content:"";position:absolute;top:100%;left:-14px;right:-14px;height:14px}
+.nav-dropdown-menu{top:100%}
+}
