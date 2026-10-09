@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI4MyNeeds helps you discover practical ways AI can help with work, life, health, money, learning and everyday problems.">
+  <title>Explore by Need | AI4MyNeeds</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("ai4myneeds-theme");
+      document.documentElement.dataset.theme = saved || "dark";
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+<a class="brand" href="index.html" aria-label="AI4MyNeeds home"><span class="brand-mark" aria-hidden="true">💡</span><span>AI4My<span>Needs</span></span></a>
+<nav class="main-nav" id="site-navigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<div class="nav-dropdown"><button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="discover-menu">Discover ▾</button><div class="nav-dropdown-menu" id="discover-menu">
+<a href="help-me-figure-it-out.html">🧭 Honestly, I Have No Idea</a>
+<a href="index.html#try-that">✨ Try That With AI</a>
+<a href="index.html#top">🗂️ Explore by Need</a>
+</div></div>
+<a href="index.html#tools">Tools & Apps</a>
+<a href="index.html#resources">Resources</a>
+<a href="about.html">About</a>
+</nav>
+<div class="nav-actions"><a class="nav-help" href="consultation.html">💬 Get Help</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme"><span class="theme-icon" aria-hidden="true">🌙</span></button><button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">☰</button></div>
+</header>
+
+  <main class="resume-page"><section class="resume-hero"><div class="resume-wrap"><p class="breadcrumb"><a href="index.html">Home</a> / Explore by Need</p><p class="eyebrow">START WITH YOUR GOAL</p><h1>Explore by Need</h1><p>You don't need to know which AI tool to use. Choose what you're trying to accomplish, and we'll help you find a useful starting point.</p></div></section><section class="resume-wrap diy-section"><div class="diy-grid"><a class="diy-card" href="work-career.html"><span>💼</span><h3>Work & Career</h3><p>Job search, communication, leadership, data and efficiency.</p><strong>Explore →</strong></a><a class="diy-card" href="help-me-figure-it-out.html"><span>❤️</span><h3>Health & Everyday Life</h3><p>Explore practical ways to plan meals, organize routines and learn about everyday wellbeing. More guided experiences are coming.</p><strong>Explore →</strong></a><a class="diy-card" href="help-me-figure-it-out.html"><span>🪙</span><h3>Money</h3><p>Get help understanding budgeting concepts, comparing options and organizing questions. More resources are coming.</p><strong>Explore →</strong></a><a class="diy-card" href="learn.html"><span>🎨</span><h3>Learn & Create</h3><p>Build skills, learn AI fundamentals and explore new ideas.</p><strong>Explore →</strong></a><a class="diy-card" href="help-me-figure-it-out.html"><span>🔧</span><h3>Solve a Problem</h3><p>Start with the problem, even if you're not sure AI is the right tool.</p><strong>Explore →</strong></a><a class="diy-card" href="content-creators.html"><span>🎬</span><h3>Content Creators</h3><p>Ideas, scripts, videos, posts and manageable creative workflows.</p><strong>Explore →</strong></a></div></section></main><footer>
+    <a class="brand footer-brand" href="#top"><span aria-hidden="true">💡</span> AI4My<span>Needs</span></a>
+    <p>&copy; <span id="year"></span> AI4MyNeeds. Built with curiosity.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
