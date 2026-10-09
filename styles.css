@@ -311,7 +311,7 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 .site-header{max-width:none;width:100%;padding:12px max(20px,calc((100vw - 1180px)/2));grid-template-columns:auto 1fr auto;gap:22px}
 .site-header .main-nav{display:flex;align-items:center;gap:clamp(12px,1.5vw,22px)}
 .nav-dropdown{position:relative}
-.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:6px;padding:.5rem 0;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font:700 .9rem inherit;cursor:pointer}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:6px;padding:.5rem 0;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer}
 .nav-dropdown-toggle:hover,.nav-dropdown-toggle[aria-expanded=true]{color:var(--text);border-bottom-color:var(--blue)}
 .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);left:-14px;min-width:245px;padding:10px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:14px;display:none;z-index:40}
 .nav-dropdown.is-open .nav-dropdown-menu{display:grid;gap:3px}
