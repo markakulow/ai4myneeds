@@ -15,24 +15,20 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="AI4MyNeeds home">
-      <span class="brand-mark" aria-hidden="true">💡</span>
-      <span>AI4My<span>Needs</span></span>
-    </a>
-
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="active" href="#top">Home</a>
-      <a href="#try-that">Try That With AI</a>
-      <a href="#tools">Tools & Apps</a>
-      <a href="learn.html">Learn</a>
-      <a href="#resources">Resources</a>
-      <a href="about.html">About</a>
-    </nav>
-
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">
-      <span class="theme-icon" aria-hidden="true">🌙</span>
-    </button>
-  </header>
+<a class="brand" href="index.html" aria-label="AI4MyNeeds home"><span class="brand-mark" aria-hidden="true">💡</span><span>AI4My<span>Needs</span></span></a>
+<nav class="main-nav" id="site-navigation" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<div class="nav-dropdown"><button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="discover-menu">Discover ▾</button><div class="nav-dropdown-menu" id="discover-menu">
+<a href="help-me-figure-it-out.html">🧭 Honestly, I Have No Idea</a>
+<a href="index.html#try-that">✨ Try That With AI</a>
+<a href="index.html#top">🗂️ Explore by Need</a>
+</div></div>
+<a href="index.html#tools">Tools & Apps</a>
+<a href="index.html#resources">Resources</a>
+<a href="about.html">About</a>
+</nav>
+<div class="nav-actions"><a class="nav-help" href="consultation.html">💬 Get Help</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme"><span class="theme-icon" aria-hidden="true">🌙</span></button><button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">☰</button></div>
+</header>
 
   <main id="top">
     <section class="hero">
@@ -71,6 +67,7 @@
             <span><strong>Solve a Problem</strong><small>Troubleshoot, analyze, compare options and get clear answers.</small></span>
             <span class="arrow" aria-hidden="true">→</span>
           </a>
+<a class="need-card creator" href="content-creators.html"><span class="need-icon" aria-hidden="true">🎬</span><span><strong>Content Creators</strong><small>Plan posts, write scripts, brainstorm ideas and create content more efficiently.</small></span><span class="arrow" aria-hidden="true">→</span></a>
         </div>
 
         <aside class="no-idea">
