@@ -348,3 +348,6 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 .nav-dropdown::after{content:"";position:absolute;top:100%;left:-14px;right:-14px;height:14px}
 .nav-dropdown-menu{top:100%}
 }
+
+/* Consistent AI4MyNeeds lightbulb-head brand mark */
+.brand .brand-mark{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.brand .brand-mark img{display:block;width:34px;height:34px;border-radius:8px}.footer-brand img{display:inline-block;width:28px;height:28px;vertical-align:middle;margin-right:5px;border-radius:6px}
