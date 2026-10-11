@@ -357,3 +357,12 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 
 /* Discovery result: accessible beginner guidance and next-level preview */
 .discovery-how,.discovery-next{margin:22px 0;padding:20px;border:1px solid var(--border);border-radius:14px;background:var(--surface-soft)}.discovery-how h3,.discovery-next h3{margin:0 0 12px;font-size:1.15rem}.discovery-how ol{padding-left:24px;margin:0}.discovery-how li{margin:12px 0;line-height:1.65}.discovery-next p{line-height:1.65}.discovery-next button{margin-top:8px}.discovery-prompt .discovery-primary{display:inline-block;margin-left:0}.discovery-how a{text-decoration:underline}
+
+/* Optional topic-specific discovery choices */
+.discovery-depth{margin-top:24px;padding:20px;border:1px solid var(--border);border-radius:15px;background:var(--surface-soft)}
+.discovery-depth h3{margin:0 0 8px}.discovery-depth>p{color:var(--muted);line-height:1.55;margin:0 0 16px}
+.discovery-depth-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.discovery-depth-options .discovery-choice{min-height:115px;background:var(--surface);padding:14px}
+.discovery-resource{padding:18px 20px;border:1px solid var(--border);border-radius:14px;margin:22px 0;background:var(--surface-soft)}
+.discovery-resource h3{margin:0 0 8px}.discovery-resource p{line-height:1.6}
+@media(max-width:760px){.discovery-depth-options{grid-template-columns:1fr}.discovery-depth-options .discovery-choice{min-height:0}}
