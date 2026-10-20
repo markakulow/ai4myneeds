@@ -33,11 +33,21 @@
 .consult-form-privacy{font-size:.78rem;line-height:1.55;color:var(--muted);margin:18px 0 0}
 @media(max-width:850px){.consult-reference-main{grid-template-columns:1fr}.consult-reference-overlay{background:linear-gradient(90deg,rgba(0,34,55,.95),rgba(0,34,55,.72))}.consult-reference-hero{min-height:0}.consult-reference-overlay{min-height:0}}
 @media(max-width:540px){.consult-reference-overlay{padding:38px 0}.consult-reference-hero h1{font-size:2.35rem}.consult-hero-benefits{gap:15px}.consult-hero-benefits>div{font-size:.78rem}.consult-benefit-icon{width:38px;height:38px;font-size:1.2rem}.consult-step{grid-template-columns:60px 1fr;gap:14px}.consult-step-icon{width:60px;height:60px;font-size:1.5rem}.consult-reference-main{padding-top:16px}.consult-explain,.consult-reference-form{padding:20px}}
-/* Approved consultation hero photograph; gradient preserves text readability */
-.consult-reference-hero{background-image:url("assets/images/turning-ai-ideas-into-action.webp");background-size:cover;background-position:center center;background-repeat:no-repeat}
+/* Consultation hero image slot: replace --consult-hero-image after the refined asset is approved. */
+.consult-reference-hero{--consult-hero-image:url("assets/images/turning-ai-ideas-into-action.webp");background-image:var(--consult-hero-image);background-size:cover;background-position:center center;background-repeat:no-repeat}
 .consult-reference-overlay{background:linear-gradient(90deg,rgba(0,28,47,.97) 0%,rgba(0,28,47,.90) 33%,rgba(0,28,47,.42) 59%,rgba(0,28,47,.03) 100%)}
 @media(max-width:850px){.consult-reference-hero{background-position:63% center}.consult-reference-overlay{background:linear-gradient(90deg,rgba(0,28,47,.95),rgba(0,28,47,.68))}}
 @media(max-width:540px){.consult-reference-hero{background-position:66% center}.consult-reference-overlay{background:linear-gradient(90deg,rgba(0,28,47,.96),rgba(0,28,47,.80))}}
+/* HubSpot forms can render inside cross-origin iframes, so keep the entire form area light in both themes.
+   Inner iframe label/placeholder/dropdown colors must be configured in HubSpot's form style editor. */
+.consult-reference-form{background:#f5f8fc!important;color:#14263d!important;border-color:#cbd7e5!important;color-scheme:light}
+.consult-reference-form .consult-form-label{color:#334b65!important}
+.consult-reference-form .consult-form-privacy{color:#43566d!important}
+.consult-reference-form .hs-form-frame{background:#fff;color:#14263d;border-radius:12px;overflow:hidden;color-scheme:light}
+.consult-reference-form .hs-form-frame :is(label,legend,.hs-form-required,.hs-richtext,p,small){color:#14263d!important;opacity:1!important}
+.consult-reference-form .hs-form-frame :is(input,select,textarea){background:#fff!important;color:#14263d!important;border:1px solid #899cb2!important;color-scheme:light}
+.consult-reference-form .hs-form-frame :is(input,textarea)::placeholder{color:#53667d!important;opacity:1}
+.consult-reference-form .hs-form-frame :is(option){background:#fff;color:#14263d}
 </style></head><body><header class="site-header">
 <a class="brand" href="index.html" aria-label="AI4MyNeeds home"><span class="brand-mark" aria-hidden="true"><img src="favicon.svg" alt="" width="34" height="34"></span><span>AI4My<span>Needs</span></span></a>
 <nav class="main-nav" id="site-navigation" aria-label="Main navigation">
@@ -55,7 +65,7 @@
 </header><aside class="newsletter-announcement" aria-label="Free AI newsletter"><span>💡 One useful AI idea could change your day. <span class="announcement-extra">Get free tips, prompts &amp; updates.</span></span> <a href="newsletter.html">Join free →</a></aside><main class="consult-page consult-reference">
 <section class="consult-reference-hero"><div class="consult-reference-overlay"><div class="consult-wrap"><p class="consult-brandline">AI4MYNEEDS</p><h1>Let's figure out what<br><span>AI can do for you.</span></h1><p class="consult-tagline">Practical ideas. Real solutions. Built around<br class="consult-desktop-break"> your goals, personal, professional or business.</p><div class="consult-hero-benefits"><div><span class="consult-benefit-icon">💡</span><strong>Explore<br>Opportunities</strong></div><div><span class="consult-benefit-icon">⚙️</span><strong>Solve<br>Real Problems</strong></div><div><span class="consult-benefit-icon">👥</span><strong>Turn Ideas<br>Into Action</strong></div></div></div></div></section>
 <section class="consult-wrap consult-reference-main" id="consultation-form">
-<div class="consult-explain"><h2>A conversation, not a sales pitch.</h2><p>Tell us what you're trying to accomplish. We'll review your request and follow up to discuss how AI could help, whether that's exploring ideas, improving or automating a process, training your team, or something else.</p>
+<div class="consult-explain"><h2>A conversation, not a sales pitch.</h2><p>We can explore ideas, improve or automate a process, support team training, or find another practical path forward. The starting point is your goal.</p>
 <div class="consult-steps"><div class="consult-step"><span class="consult-step-icon blue">💬</span><div><h3>Share your goals</h3><p>Tell us what you're looking to accomplish.</p></div></div><div class="consult-step"><span class="consult-step-icon green">⌕</span><div><h3>Explore possibilities</h3><p>We'll help you think through practical ways AI could support your efforts.</p></div></div><div class="consult-step"><span class="consult-step-icon gold">♧</span><div><h3>Get a personalized response</h3><p>We'll follow up to discuss next steps and how we can help.</p></div></div></div>
 <div class="consult-unsure"><span>💡</span><div><h3>Not sure where to start?</h3><p>That's okay. You don't need to have a specific idea in mind. Just tell us what you're working on and we'll help you explore the options.</p></div></div></div>
 <div class="consult-reference-form"><p class="consult-form-label">REQUEST A CONSULTATION</p><div class="consult-label-rule"></div><div class="hs-form-frame" data-region="na2" data-form-id="58c36e40-572d-4c26-8225-e73d951f58c7" data-portal-id="247568316"></div><noscript><p>Enable JavaScript to load the consultation form.</p></noscript><p class="consult-form-privacy">🔒 &nbsp;Please avoid sharing passwords, financial account details, medical records, or other sensitive information.</p></div>
