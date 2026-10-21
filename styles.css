@@ -377,3 +377,13 @@ html[data-theme="dark"] .work-card{background:var(--surface)}
 .newsletter-announcement a{color:#a5dcff;text-decoration:underline;text-underline-offset:3px;font-weight:700;white-space:nowrap}
 .newsletter-announcement a:hover,.newsletter-announcement a:focus-visible{color:#fff}
 @media(max-width:520px){.newsletter-announcement{padding:8px 12px;gap:3px 9px;font-size:.77rem}.newsletter-announcement .announcement-extra{display:none}}
+
+/* 2026 navigation readability and newsletter announcement */
+@media(min-width:901px){
+.site-header .main-nav{gap:clamp(12px,1.35vw,20px)}
+.site-header .main-nav>a,.site-header .nav-dropdown-toggle{font-size:1rem;font-weight:750}
+.site-header .main-nav>a{padding:.65rem 0}
+}
+.newsletter-announcement{font-size:.94rem;padding:11px 16px}
+.newsletter-announcement a{font-weight:800}
+@media(max-width:520px){.newsletter-announcement{font-size:.8rem;padding:9px 12px}}
